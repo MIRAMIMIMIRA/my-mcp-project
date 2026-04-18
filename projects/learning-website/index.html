@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Learning Dashboard</h1>
+    <nav>
+      <button class="nav-btn active" data-tab="todos">Tasks</button>
+      <button class="nav-btn" data-tab="notes">Notes</button>
+      <button class="nav-btn" data-tab="counter">Counter</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Tasks Tab -->
+    <section id="todos" class="tab active">
+      <h2>Task List</h2>
+      <div class="input-row">
+        <input id="todo-input" type="text" placeholder="Add a new task..." />
+        <button id="todo-add-btn">Add</button>
+      </div>
+      <ul id="todo-list"></ul>
+      <p id="todo-empty" class="empty-msg">No tasks yet. Add one above!</p>
+    </section>
+
+    <!-- Notes Tab -->
+    <section id="notes" class="tab">
+      <h2>Quick Notes</h2>
+      <div class="input-row">
+        <input id="note-title" type="text" placeholder="Note title..." />
+        <button id="note-add-btn">Add</button>
+      </div>
+      <textarea id="note-body" placeholder="Write your note here..."></textarea>
+      <div id="notes-list"></div>
+      <p id="notes-empty" class="empty-msg">No notes yet. Write one above!</p>
+    </section>
+
+    <!-- Counter Tab -->
+    <section id="counter" class="tab">
+      <h2>Click Counter</h2>
+      <div class="counter-box">
+        <span id="count-display">0</span>
+        <div class="counter-btns">
+          <button id="decrement-btn">−</button>
+          <button id="reset-btn">Reset</button>
+          <button id="increment-btn">+</button>
+        </div>
+        <p id="counter-msg"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Learning Dashboard — built to practice GitHub Issues</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
